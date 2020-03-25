@@ -1,9 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { useState, useContext } from 'react'
+
+import { store } from './state'
 
 function App() {
+  let { state } = useContext(store)
+
   return (
-    <Fragment />
+    <main>
+      Binance
+    </main>
   );
 }
 
-export default App;
+export default App
