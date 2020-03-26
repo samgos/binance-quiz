@@ -11,12 +11,18 @@ import Start from './pages/start'
 
 import './assets/css/main.css'
 
+const qmetadata = {
+  options: [ 'Choice 1', 'Choice 2', 'Choice 3', 'Choice 4'],
+  excerpt: 'What is the first choice?',
+  answer: 'Choice 1'
+}
+
 function App() {
   const [ quizPhase, setPhase ] = useState(<div />)
   let { state, dispatch } = useContext(store)
 
   const progressStage = () => {
-    setPhase(<Question />)
+    setPhase(<Question metadata={qmetadata} />)
   }
 
   useEffect(() => {
