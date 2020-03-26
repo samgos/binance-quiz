@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "San Francisco";
+  src: url("../fonts/SF-Ultralight.otf");
+}
+
+@font-face {
+  font-family: "San Francisco Reg";
+  src: url("../fonts/SF-Regular.otf");
+}
+
+@font-face {
+  font-family: "San Francisco Bold";
+  src: url("../fonts/SF-Bold.otf");
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle farthest-corner at 100% 150%, rgba(27, 27, 27, 1) 0%, rgba(0, 0, 0, 1) 100.2% ) fixed;
+  font-family: "San Francisco";
+  background-size: contain;
+  color: white;
+}
+
+nav {
+  position: absolute;
+}
+
+main nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+ padding: 2.5em 0em;
+}
+
+.nav-logo {
+  width: 3.75em;
+}
