@@ -1,12 +1,9 @@
-const BINANCE_ACADEMY_ENDPOINT = 'https://api.binance.vision/api/glossaries/'
+const BINANCE_ENDPOINT = 'http://cors-anywhere.herokuapp.com/https://api.binance.vision/api/glossaries/'
 
 export async function getQuestions() {
-  return await fetch(BINANCE_ACADEMY_ENDPOINT,
-    {  method: 'GET',
-       mode: 'no-cors' })
+  return await fetch(BINANCE_ENDPOINT,
+    {  method: 'GET' })
     .then(response =>
       response.json())
-    .then(result =>
-      result.data)
     .catch(console.log)
 }

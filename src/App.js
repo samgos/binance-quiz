@@ -6,18 +6,26 @@ import { getQuestions } from './utils/REST'
 import { store } from './state'
 
 import Navigation from './assets/components/navigation'
-import Button from './assets/components/button'
+import Question from './pages/question'
+import Start from './pages/start'
 
 import './assets/css/main.css'
 
 function App() {
+  const [ quizPhase, setPhase ] = useState(<div />)
   let { state, dispatch } = useContext(store)
+
+  const progressStage = () => {
+    setPhase(<Question />)
+  }
 
   useEffect(() => {
     const callQuiz = async() => {
       const metadata = await getQuestions()
 
-      dispatch({
+      setPhase(<Start next={progressStage}/>)
+
+      await dispatch({
         payload: metadata,
         type: 'INIT'
       })
@@ -29,12 +37,7 @@ function App() {
     <main>
       <Navigation/>
       <Grid container direction="column" alignItems="center" justify="center" style={{ minHeight: '100vh' }}>
-        <Grid item>
-          <h1> Up for a challenge? </h1>
-        </Grid>
-        <Grid item>
-          <Button> Start </Button>
-        </Grid>
+        {quizPhase}
       </Grid>
     </main>
   );
