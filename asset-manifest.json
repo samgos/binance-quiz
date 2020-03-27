@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/binance-quiz/static/css/main.f1068fcc.chunk.css",
-    "main.js": "/binance-quiz/static/js/main.e04d6879.chunk.js",
-    "main.js.map": "/binance-quiz/static/js/main.e04d6879.chunk.js.map",
+    "main.js": "/binance-quiz/static/js/main.34205a23.chunk.js",
+    "main.js.map": "/binance-quiz/static/js/main.34205a23.chunk.js.map",
     "runtime-main.js": "/binance-quiz/static/js/runtime-main.4800c937.js",
     "runtime-main.js.map": "/binance-quiz/static/js/runtime-main.4800c937.js.map",
     "static/js/2.ebb031ce.chunk.js": "/binance-quiz/static/js/2.ebb031ce.chunk.js",
     "static/js/2.ebb031ce.chunk.js.map": "/binance-quiz/static/js/2.ebb031ce.chunk.js.map",
     "index.html": "/binance-quiz/index.html",
-    "precache-manifest.43bab7978e5830782f0bbf5baf7ccfb1.js": "/binance-quiz/precache-manifest.43bab7978e5830782f0bbf5baf7ccfb1.js",
+    "precache-manifest.5ea8b78759b5ba70511d9e319c4bca47.js": "/binance-quiz/precache-manifest.5ea8b78759b5ba70511d9e319c4bca47.js",
     "service-worker.js": "/binance-quiz/service-worker.js",
     "static/css/main.f1068fcc.chunk.css.map": "/binance-quiz/static/css/main.f1068fcc.chunk.css.map",
     "static/js/2.ebb031ce.chunk.js.LICENSE.txt": "/binance-quiz/static/js/2.ebb031ce.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.4800c937.js",
     "static/js/2.ebb031ce.chunk.js",
     "static/css/main.f1068fcc.chunk.css",
-    "static/js/main.e04d6879.chunk.js"
+    "static/js/main.34205a23.chunk.js"
   ]
 }

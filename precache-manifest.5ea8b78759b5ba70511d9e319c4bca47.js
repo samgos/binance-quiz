@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "62d80669ec7752454d1406d1fbe7e6af",
+    "revision": "f69e80bba77dfda3c9168d550e4a2121",
     "url": "/binance-quiz/index.html"
   },
   {
-    "revision": "2b214c358324495914e5",
+    "revision": "1c459af42f9206308c09",
     "url": "/binance-quiz/static/css/main.f1068fcc.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/binance-quiz/static/js/2.ebb031ce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2b214c358324495914e5",
-    "url": "/binance-quiz/static/js/main.e04d6879.chunk.js"
+    "revision": "1c459af42f9206308c09",
+    "url": "/binance-quiz/static/js/main.34205a23.chunk.js"
   },
   {
     "revision": "31385c1a423bbafffc54",
