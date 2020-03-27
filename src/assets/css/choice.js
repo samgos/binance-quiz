@@ -1,6 +1,6 @@
 export default { label: {
     fontFamily: 'inherit',
     paddingLeft: '.5em',
-    fontSize: '1.5rem'
+    fontSize: '1.75rem'
   }
 }
