@@ -1,16 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react'
 
 import RadioGroup from '@material-ui/core/RadioGroup'
-import FormControl from '@material-ui/core/FormControl'
-import FormLabel from '@material-ui/core/FormLabel'
 import { Random } from 'react-animated-text'
 import Grid from '@material-ui/core/Grid'
 import Bounce from 'react-reveal/Bounce'
 
 import Select from '../assets/components/select'
 import Choice from '../assets/components/choice'
-
-import label from '../assets/css/label'
+import Button from '../assets/components/button'
 
 const delay = ms => new Promise(res => setTimeout(res, ms))
 
@@ -57,14 +54,14 @@ function Question(props) {
           <h1> {excerpt} </h1>
         </Grid>
         <Grid item>
-          <FormControl component="fieldset">
-            <FormLabel component="legend" style={label}>Answer</FormLabel>
-            <RadioGroup aria-label="options" value={true}>
-              <Choice value={options[1]} control={<Select checked={true} />} label={options[1]} />
-              <Choice value={options[1]} control={<Select />} label={options[1]} />
-              <Choice value={options[2]} control={<Select />} label={options[2]} />
-             </RadioGroup>
-          </FormControl>
+          <RadioGroup aria-label="options" value={true} style={{ paddingBottom: '2em' }}>
+            <Choice value={options[0]} control={<Select checked={true} />} label={options[0]} />
+            <Choice value={options[1]} control={<Select />} label={options[1]} />
+            <Choice value={options[2]} control={<Select />} label={options[2]} />
+           </RadioGroup>
+        </Grid>
+        <Grid item>
+          <Button> Answer </Button>
         </Grid>
       </Fragment>
     )
