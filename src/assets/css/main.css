@@ -26,9 +26,12 @@ body {
 }
 
 h1 {
-  margin-block-start: 0;
   text-align: center;
   width: 75vw;
+}
+
+.question-title {
+  margin-block-start: 0;
 }
 
 .nav-logo {

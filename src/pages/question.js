@@ -59,7 +59,7 @@ function Question(props) {
     return(
       <Fragment>
         <Grid item>
-          <h1> {excerpt} </h1>
+          <h1 className="question-title"> {excerpt} </h1>
         </Grid>
         <Grid item>
           <RadioGroup aria-label="options" value={true} style={{ paddingBottom: '2em' }}>

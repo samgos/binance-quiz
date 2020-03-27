@@ -1,4 +1,4 @@
-const BINANCE_ENDPOINT = 'http://cors-anywhere.herokuapp.com/https://api.binance.vision/api/glossaries/'
+const BINANCE_ENDPOINT = 'https://api.binance.vision/api/glossaries/'
 
 export async function getQuestions() {
   let questions = await fetch(BINANCE_ENDPOINT,
