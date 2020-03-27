@@ -31,21 +31,11 @@ h1 {
   padding-right: .75em;
 }
 
-nav {
-  position: absolute;
-}
-
-main nav ul {
-  list-style-type: none;
-  margin: 0;
-}
-
-nav li {
- padding: 2.5em 0em;
-}
-
 .nav-logo {
-  width: 3.75em;
+  width: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .question-notation {

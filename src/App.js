@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import { getQuestions } from './utils/REST'
 import { store } from './state'
 
-import Navigation from './assets/components/navigation'
+import Loader from './assets/components/loader'
 import Question from './pages/question'
 import Start from './pages/start'
 
@@ -18,7 +18,7 @@ const qmetadata = {
 }
 
 function App() {
-  const [ quizPhase, setPhase ] = useState(<div />)
+  const [ quizPhase, setPhase ] = useState(<Loader />)
   let { state, dispatch } = useContext(store)
 
   const progressStage = () => {
@@ -41,7 +41,6 @@ function App() {
 
   return (
     <main>
-      <Navigation/>
       <Grid container direction="column" alignItems="center" justify="center" style={{ minHeight: '100vh' }}>
         {quizPhase}
       </Grid>

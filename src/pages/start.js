@@ -4,6 +4,8 @@ import Button from '../assets/components/button'
 import Grid from '@material-ui/core/Grid'
 import Bounce from 'react-reveal/Bounce'
 
+import logo from "../assets/images/logo.svg"
+
 const delay = ms => new Promise(res => setTimeout(res, ms))
 
 function Start(props){
@@ -21,6 +23,7 @@ function Start(props){
     <Fragment>
       <Grid item>
         <Bounce bottom>
+          <img className="nav-logo" src={logo} />
           <h1> Up for a challenge? </h1>
         </Bounce>
       </Grid>
