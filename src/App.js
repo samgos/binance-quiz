@@ -29,6 +29,8 @@ function App() {
     const callQuiz = async() => {
       const metadata = await getQuestions()
 
+      console.log(metadata)
+
       setPhase(<Start next={progressStage}/>)
 
       await dispatch({
