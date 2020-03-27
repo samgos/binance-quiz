@@ -12,24 +12,25 @@ import Start from './pages/start'
 import './assets/css/main.css'
 
 const qmetadata = {
-  options: [ 'Choice 1', 'Choice 2', 'Choice 3', 'Choice 4'],
+  options: [ 'Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
   excerpt: 'What is the first choice?',
   answer: 'Choice 1'
 }
 
 function App() {
   const [ quizPhase, setPhase ] = useState(<Loader />)
+  const [ qIndex, setIndex ] = useState(0)
+
   let { state, dispatch } = useContext(store)
 
   const progressStage = () => {
-    setPhase(<Question metadata={qmetadata} />)
+    setPhase(<Question index={qIndex} />)
+    setIndex(qIndex + 1)
   }
 
   useEffect(() => {
     const callQuiz = async() => {
       const metadata = await getQuestions()
-
-      console.log(metadata)
 
       setPhase(<Start next={progressStage}/>)
 

@@ -26,9 +26,9 @@ body {
 }
 
 h1 {
+  margin-block-start: 0;
   text-align: center;
-  padding-left: .75em;
-  padding-right: .75em;
+  width: 75vw;
 }
 
 .nav-logo {

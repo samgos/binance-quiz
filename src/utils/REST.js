@@ -19,18 +19,16 @@ function pluckQuestion(existing, raw) {
   let meta = randomIndex(raw)
 
   if(existing[meta.slug] == undefined){
-    let options = getOptions(meta, raw)
-
     existing[meta.slug] = {
-      question: meta.excerpt,
+      excerpt: meta.excerpt,
       answer: meta.title,
-      options
+      ...getOptions(meta, raw)
     }
   } return existing
 }
 
 function getOptions(main, raw){
-  let random = Math.floor(Math.random() * 5) 
+  let random = Math.floor(Math.random() * 5)
   let options = []
 
   while(options.length < 5){

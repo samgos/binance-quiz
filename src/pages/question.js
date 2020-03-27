@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect, useContext } from 'react'
 
 import RadioGroup from '@material-ui/core/RadioGroup'
 import { Random } from 'react-animated-text'
@@ -9,10 +9,18 @@ import Select from '../assets/components/select'
 import Choice from '../assets/components/choice'
 import Button from '../assets/components/button'
 
+import { store } from '../state'
+
 const delay = ms => new Promise(res => setTimeout(res, ms))
 
 function Question(props) {
   const [ activeComponent, setComponent ] = useState(<Title />)
+
+  let { state, dispatch } = useContext(store)
+  let { glossaries } = state
+  let { index } = props
+
+  let metadata = Object.entries(glossaries)[index][1]
 
   function Title(){
     const [ questionReveal, setReveal ] = useState(true)
@@ -46,7 +54,7 @@ function Question(props) {
   }
 
   function Query() {
-    const { options, excerpt } = props.metadata
+    const { options, excerpt } = metadata
 
     return(
       <Fragment>
@@ -58,6 +66,8 @@ function Question(props) {
             <Choice value={options[0]} control={<Select checked={true} />} label={options[0]} />
             <Choice value={options[1]} control={<Select />} label={options[1]} />
             <Choice value={options[2]} control={<Select />} label={options[2]} />
+            <Choice value={options[3]} control={<Select />} label={options[3]} />
+            <Choice value={options[4]} control={<Select />} label={options[4]} />
            </RadioGroup>
         </Grid>
         <Grid item>
