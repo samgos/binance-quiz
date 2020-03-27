@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.be95f24f.chunk.css",
-    "main.js": "/static/js/main.023446cb.chunk.js",
-    "main.js.map": "/static/js/main.023446cb.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f8c5b4be.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f8c5b4be.js.map",
-    "static/js/2.ebb031ce.chunk.js": "/static/js/2.ebb031ce.chunk.js",
-    "static/js/2.ebb031ce.chunk.js.map": "/static/js/2.ebb031ce.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.40f85e1fadd67d0f9f73a93cacb0864a.js": "/precache-manifest.40f85e1fadd67d0f9f73a93cacb0864a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.be95f24f.chunk.css.map": "/static/css/main.be95f24f.chunk.css.map",
-    "static/js/2.ebb031ce.chunk.js.LICENSE.txt": "/static/js/2.ebb031ce.chunk.js.LICENSE.txt",
-    "static/media/main.css": "/static/media/SF-Ultralight.8c8b1682.otf",
-    "static/media/logo.svg": "/static/media/logo.800924df.svg"
+    "main.css": "/binance-quiz/static/css/main.f1068fcc.chunk.css",
+    "main.js": "/binance-quiz/static/js/main.18d6b279.chunk.js",
+    "main.js.map": "/binance-quiz/static/js/main.18d6b279.chunk.js.map",
+    "runtime-main.js": "/binance-quiz/static/js/runtime-main.4800c937.js",
+    "runtime-main.js.map": "/binance-quiz/static/js/runtime-main.4800c937.js.map",
+    "static/js/2.ebb031ce.chunk.js": "/binance-quiz/static/js/2.ebb031ce.chunk.js",
+    "static/js/2.ebb031ce.chunk.js.map": "/binance-quiz/static/js/2.ebb031ce.chunk.js.map",
+    "index.html": "/binance-quiz/index.html",
+    "precache-manifest.0222c018b0a0ad51d5b535cf0949ad89.js": "/binance-quiz/precache-manifest.0222c018b0a0ad51d5b535cf0949ad89.js",
+    "service-worker.js": "/binance-quiz/service-worker.js",
+    "static/css/main.f1068fcc.chunk.css.map": "/binance-quiz/static/css/main.f1068fcc.chunk.css.map",
+    "static/js/2.ebb031ce.chunk.js.LICENSE.txt": "/binance-quiz/static/js/2.ebb031ce.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/binance-quiz/static/media/SF-Ultralight.8c8b1682.otf",
+    "static/media/logo.svg": "/binance-quiz/static/media/logo.800924df.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8c5b4be.js",
+    "static/js/runtime-main.4800c937.js",
     "static/js/2.ebb031ce.chunk.js",
-    "static/css/main.be95f24f.chunk.css",
-    "static/js/main.023446cb.chunk.js"
+    "static/css/main.f1068fcc.chunk.css",
+    "static/js/main.18d6b279.chunk.js"
   ]
 }
