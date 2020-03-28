@@ -1,11 +1,15 @@
 import React, { Fragment, useState, useEffect, useContext } from 'react'
 
 import Grid from '@material-ui/core/Grid'
+import Bounce from 'react-reveal/Bounce'
 
 import { store } from '../state'
 
+const delay = ms => new Promise(res => setTimeout(res, ms))
+
 function Score(props) {
   const [ feedback, setFeedback ] = useState(null)
+  const [ revealState, setReveal ] = useState(false)
 
   let { state } = useContext(store)
   let { score } = state
@@ -40,19 +44,28 @@ function Score(props) {
   }
 
   useEffect(() => {
+    const animateRender = async() => {
+      await delay(1000)
+      await setReveal(true)
+    }
     getFeedback()
+    animateRender()
   }, [ ])
 
   return(
     <Fragment>
       <Grid item>
-        <h1> {feedback} </h1>
+        <Bounce top>
+          <h1> {feedback} </h1>
+        </Bounce>
       </Grid>
       <Grid item>
-        <h2> Your score: </h2>
-        <p className="score">
-          <span className="val">{state.score}</span>/10
-        </p>
+        <Bounce bottom when={revealState}>
+          <h2> Your score: </h2>
+          <p className="score">
+            <span className="val">{state.score}</span>/10
+          </p>
+        </Bounce>
       </Grid>
     </Fragment>
   )
