@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { Fragment, useState, useContext, useEffect } from 'react'
 
 import Grid from '@material-ui/core/Grid'
 
@@ -23,16 +23,20 @@ function App() {
 
   let { state, dispatch } = useContext(store)
 
-  const progressStage = () => {
-    setPhase(<Question index={qIndex} />)
-    setIndex(qIndex + 1)
+  const setQuestion = (index) => {
+    setPhase(<Question index={index} next={() => nextQuestion(index)} />)
+  }
+
+  const nextQuestion = async(index) => {
+    let questionIndex = index + 1
+    await setQuestion(questionIndex)
   }
 
   useEffect(() => {
     const callQuiz = async() => {
       const metadata = await getQuestions()
 
-      setPhase(<Start next={progressStage}/>)
+      setPhase(<Start next={() => setQuestion(0)}/>)
 
       await dispatch({
         payload: metadata,

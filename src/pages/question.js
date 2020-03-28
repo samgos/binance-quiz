@@ -25,12 +25,14 @@ function Question(props) {
 
   let metadata = Object.entries(glossaries)[index][1]
 
-  const answerQuestion = (selection) => {
+  const answerQuestion = async(selection) => {
     if(metadata.options[selection] == metadata.answer){
-      setComponent(<Correct />)
+      await setComponent(<Correct />)
+      await delay(3000)
     } else {
-      setComponent(<Incorrect />)
-    }
+      await setComponent(<Incorrect />)
+      await delay(3000)
+    } props.next()
   }
 
   function Title(){
@@ -52,7 +54,7 @@ function Question(props) {
         <Bounce opposite when={questionReveal}>
           <div className="question-notation">
             <Random
-            text="Question 1"
+            text={`Question ${index + 1}`}
             iterations={1}
             effect="verticalFadeIn"
             effectChange={2}
@@ -95,6 +97,15 @@ function Question(props) {
       </Fragment>
     )
   }
+
+  useEffect(() => {
+    let { index }  = props
+    let metadata = Object.entries(glossaries)[index][1]
+
+    console.log(metadata)
+
+    setComponent(<Title />)
+  }, [ props.index ])
 
   return(
     <Fragment>

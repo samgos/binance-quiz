@@ -17,7 +17,6 @@ function Incorrect(){
       loop={false}
       height={100}
       width={100}
-      speed={10}
      />
   )
 }
