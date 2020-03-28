@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/binance-quiz/static/css/main.f1068fcc.chunk.css",
-    "main.js": "/binance-quiz/static/js/main.31b78cd4.chunk.js",
-    "main.js.map": "/binance-quiz/static/js/main.31b78cd4.chunk.js.map",
+    "main.css": "/binance-quiz/static/css/main.c9dcea2e.chunk.css",
+    "main.js": "/binance-quiz/static/js/main.acfde28b.chunk.js",
+    "main.js.map": "/binance-quiz/static/js/main.acfde28b.chunk.js.map",
     "runtime-main.js": "/binance-quiz/static/js/runtime-main.4800c937.js",
     "runtime-main.js.map": "/binance-quiz/static/js/runtime-main.4800c937.js.map",
-    "static/js/2.7fac0f47.chunk.js": "/binance-quiz/static/js/2.7fac0f47.chunk.js",
-    "static/js/2.7fac0f47.chunk.js.map": "/binance-quiz/static/js/2.7fac0f47.chunk.js.map",
+    "static/js/2.bede6782.chunk.js": "/binance-quiz/static/js/2.bede6782.chunk.js",
+    "static/js/2.bede6782.chunk.js.map": "/binance-quiz/static/js/2.bede6782.chunk.js.map",
     "index.html": "/binance-quiz/index.html",
-    "precache-manifest.233b592c34409abb0bda372b5dd24b3f.js": "/binance-quiz/precache-manifest.233b592c34409abb0bda372b5dd24b3f.js",
+    "precache-manifest.227601faf362c6ffc93172a5701422e8.js": "/binance-quiz/precache-manifest.227601faf362c6ffc93172a5701422e8.js",
     "service-worker.js": "/binance-quiz/service-worker.js",
-    "static/css/main.f1068fcc.chunk.css.map": "/binance-quiz/static/css/main.f1068fcc.chunk.css.map",
-    "static/js/2.7fac0f47.chunk.js.LICENSE.txt": "/binance-quiz/static/js/2.7fac0f47.chunk.js.LICENSE.txt",
+    "static/css/main.c9dcea2e.chunk.css.map": "/binance-quiz/static/css/main.c9dcea2e.chunk.css.map",
+    "static/js/2.bede6782.chunk.js.LICENSE.txt": "/binance-quiz/static/js/2.bede6782.chunk.js.LICENSE.txt",
     "static/media/main.css": "/binance-quiz/static/media/SF-Ultralight.8c8b1682.otf",
     "static/media/logo.svg": "/binance-quiz/static/media/logo.800924df.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4800c937.js",
-    "static/js/2.7fac0f47.chunk.js",
-    "static/css/main.f1068fcc.chunk.css",
-    "static/js/main.31b78cd4.chunk.js"
+    "static/js/2.bede6782.chunk.js",
+    "static/css/main.c9dcea2e.chunk.css",
+    "static/js/main.acfde28b.chunk.js"
   ]
 }
