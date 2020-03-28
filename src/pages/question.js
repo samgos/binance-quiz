@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect, useContext } from 'react'
 
+import FormControl from '@material-ui/core/FormControl'
 import RadioGroup from '@material-ui/core/RadioGroup'
 import { Random } from 'react-animated-text'
 import Grid from '@material-ui/core/Grid'
@@ -8,6 +9,8 @@ import Bounce from 'react-reveal/Bounce'
 import Select from '../assets/components/select'
 import Choice from '../assets/components/choice'
 import Button from '../assets/components/button'
+import Correct from '../assets/components/correct'
+import Incorrect from '../assets/components/incorrect'
 
 import { store } from '../state'
 
@@ -21,6 +24,14 @@ function Question(props) {
   let { index } = props
 
   let metadata = Object.entries(glossaries)[index][1]
+
+  const answerQuestion = (selection) => {
+    if(metadata.options[selection] == metadata.answer){
+      setComponent(<Correct />)
+    } else {
+      setComponent(<Incorrect />)
+    }
+  }
 
   function Title(){
     const [ questionReveal, setReveal ] = useState(true)
@@ -54,7 +65,13 @@ function Question(props) {
   }
 
   function Query() {
-    const { options, excerpt } = metadata
+    const [ value, setValue ] = useState(0)
+
+    let { options, excerpt } = metadata
+
+    const handleChange = event => {
+      setValue(event.target.value)
+    }
 
     return(
       <Fragment>
@@ -62,16 +79,18 @@ function Question(props) {
           <h1 className="question-title"> {excerpt} </h1>
         </Grid>
         <Grid item>
-          <RadioGroup aria-label="options" value={true} style={{ paddingBottom: '2em' }}>
-            <Choice value={options[0]} control={<Select checked={true} />} label={options[0]} />
-            <Choice value={options[1]} control={<Select />} label={options[1]} />
-            <Choice value={options[2]} control={<Select />} label={options[2]} />
-            <Choice value={options[3]} control={<Select />} label={options[3]} />
-            <Choice value={options[4]} control={<Select />} label={options[4]} />
-           </RadioGroup>
+          <FormControl component="fieldset">
+            <RadioGroup aria-label="options" onChange={handleChange} style={{ paddingBottom: '2em' }}>
+              <Choice value={0} control={<Select checked={value == 0}/>} label={options[0]} />
+              <Choice value={1} control={<Select checked={value == 1}/>} label={options[1]} />
+              <Choice value={2} control={<Select checked={value == 2}/>} label={options[2]} />
+              <Choice value={3} control={<Select checked={value == 3}/>} label={options[3]} />
+              <Choice value={4} control={<Select checked={value == 4}/>} label={options[4]} />
+            </RadioGroup>
+          </FormControl>
         </Grid>
         <Grid item>
-          <Button> Answer </Button>
+          <Button onClick={() => answerQuestion(value)}> Answer </Button>
         </Grid>
       </Fragment>
     )

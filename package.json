@@ -17,9 +17,9 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
+    "deploy": "react-scripts build && gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "gh-pages -d build"
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
