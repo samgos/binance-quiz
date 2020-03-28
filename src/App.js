@@ -17,6 +17,8 @@ const qmetadata = {
   answer: 'Choice 1'
 }
 
+const delay = ms => new Promise(res => setTimeout(res, ms))
+
 function App() {
   const [ quizPhase, setPhase ] = useState(<Loader />)
   const [ qIndex, setIndex ] = useState(0)
@@ -35,6 +37,7 @@ function App() {
   useEffect(() => {
     const callQuiz = async() => {
       const metadata = await getQuestions()
+      await delay(7500)
 
       setPhase(<Start next={() => setQuestion(0)}/>)
 

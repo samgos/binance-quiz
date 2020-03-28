@@ -78,11 +78,11 @@ function Question(props) {
     return(
       <Fragment>
         <Grid item>
-          <h1 className="question-title"> {excerpt} </h1>
+          <h1> {excerpt} </h1>
         </Grid>
         <Grid item>
           <FormControl component="fieldset">
-            <RadioGroup aria-label="options" onChange={handleChange} style={{ paddingBottom: '2em' }}>
+            <RadioGroup aria-label="options" onChange={handleChange} style={{ padding: '0em 2em 2em 2em' }}>
               <Choice value={0} control={<Select checked={value == 0}/>} label={options[0]} />
               <Choice value={1} control={<Select checked={value == 1}/>} label={options[1]} />
               <Choice value={2} control={<Select checked={value == 2}/>} label={options[2]} />
