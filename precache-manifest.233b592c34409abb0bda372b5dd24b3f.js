@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f69e80bba77dfda3c9168d550e4a2121",
+    "revision": "5f583c9d45c02f09e5cb4cb6956d52d0",
     "url": "/binance-quiz/index.html"
   },
   {
-    "revision": "1c459af42f9206308c09",
+    "revision": "fc8af9b01378110d923d",
     "url": "/binance-quiz/static/css/main.f1068fcc.chunk.css"
   },
   {
-    "revision": "2105c205ed0b6691dbe3",
-    "url": "/binance-quiz/static/js/2.ebb031ce.chunk.js"
+    "revision": "b85c0ca372d93158925f",
+    "url": "/binance-quiz/static/js/2.7fac0f47.chunk.js"
   },
   {
     "revision": "b6e553871546b514bc5dece8c5278b28",
-    "url": "/binance-quiz/static/js/2.ebb031ce.chunk.js.LICENSE.txt"
+    "url": "/binance-quiz/static/js/2.7fac0f47.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1c459af42f9206308c09",
-    "url": "/binance-quiz/static/js/main.34205a23.chunk.js"
+    "revision": "fc8af9b01378110d923d",
+    "url": "/binance-quiz/static/js/main.31b78cd4.chunk.js"
   },
   {
     "revision": "31385c1a423bbafffc54",
