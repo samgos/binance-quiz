@@ -14,19 +14,19 @@
 }
 
 html, body {
+  background: radial-gradient(circle farthest-corner at 100% 150%, rgba(27, 27, 27, 1) 0%, rgba(0, 0, 0, 1) 100.2% ) fixed;
+  background-size: contain;
   margin: 0 auto;
   padding: 0;
 }
 
 body {
-  background: radial-gradient(circle farthest-corner at 100% 150%, rgba(27, 27, 27, 1) 0%, rgba(0, 0, 0, 1) 100.2% ) fixed;
   font-family: "San Francisco";
-  background-size: contain;
+  text-align: center;
   color: white;
 }
 
 h1 {
-  text-align: center;
   width: 75vw;
 }
 
@@ -39,4 +39,32 @@ h1 {
 
 .question-notation {
   font-size: 2em;
+}
+
+.score {
+  font-family: "San Francisco Reg";
+  font-size: 2em;
+}
+
+.question-timer {
+  position: absolute;
+  right: 1.5%;
+  top: 2.5%;
+}
+
+@media only screen and (max-width: 600px) {
+
+   .MuiFormControlLabel-label  {
+     font-size: 1.2rem !important;
+   }
+
+  .question-timer {
+    right: 5%;
+    top: 2.5%;
+  }
+
+  .question-title {
+    font-size: 1.375rem;
+  }
+
 }

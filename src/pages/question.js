@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect, useContext } from 'react'
 
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import FormControl from '@material-ui/core/FormControl'
 import RadioGroup from '@material-ui/core/RadioGroup'
 import { Random } from 'react-animated-text'
@@ -28,6 +29,7 @@ function Question(props) {
   const answerQuestion = async(selection) => {
     if(metadata.options[selection] == metadata.answer){
       await setComponent(<Correct />)
+      await dispatch({ type: 'ANS' })
       await delay(3000)
     } else {
       await setComponent(<Incorrect />)
@@ -75,14 +77,33 @@ function Question(props) {
       setValue(event.target.value)
     }
 
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        answerQuestion('blank')
+      }, 15000);
+      return () => clearTimeout(timer);
+    }, [ ])
+
     return(
       <Fragment>
         <Grid item>
-          <h1> {excerpt} </h1>
+          <div className="question-timer">
+            <CountdownCircleTimer
+              durationSeconds={15}
+              colors={[
+                ['#f0ba2d' , 0]
+              ]}
+              trailColor='white'
+              strokeWidth={6}
+              size={50}
+              isPlaying
+             />
+          </div>
+          <h1 className="question-title"> {excerpt} </h1>
         </Grid>
         <Grid item>
           <FormControl component="fieldset">
-            <RadioGroup aria-label="options" onChange={handleChange} style={{ padding: '0em 2em 2em 2em' }}>
+            <RadioGroup aria-label="options" onChange={handleChange} style={{ paddingLeft: '2em', paddingBottom: '2em' }}>
               <Choice value={0} control={<Select checked={value == 0}/>} label={options[0]} />
               <Choice value={1} control={<Select checked={value == 1}/>} label={options[1]} />
               <Choice value={2} control={<Select checked={value == 2}/>} label={options[2]} />
@@ -99,11 +120,7 @@ function Question(props) {
   }
 
   useEffect(() => {
-    let { index }  = props
-    let metadata = Object.entries(glossaries)[index][1]
-
-    console.log(metadata)
-
+    metadata = Object.entries(glossaries)[index][1]
     setComponent(<Title />)
   }, [ props.index ])
 

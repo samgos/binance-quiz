@@ -7,15 +7,10 @@ import { store } from './state'
 
 import Loader from './assets/components/loader'
 import Question from './pages/question'
+import Score from './pages/score'
 import Start from './pages/start'
 
 import './assets/css/main.css'
-
-const qmetadata = {
-  options: [ 'Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-  excerpt: 'What is the first choice?',
-  answer: 'Choice 1'
-}
 
 const delay = ms => new Promise(res => setTimeout(res, ms))
 
@@ -31,7 +26,9 @@ function App() {
 
   const nextQuestion = async(index) => {
     let questionIndex = index + 1
-    await setQuestion(questionIndex)
+
+    if(questionIndex < 10) await setQuestion(questionIndex)
+    else setPhase(<Score />)
   }
 
   useEffect(() => {

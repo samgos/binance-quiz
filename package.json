@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-animated-text": "^0.1.4",
+    "react-countdown-circle-timer": "^1.1.1",
     "react-dom": "^16.13.1",
     "react-lottie": "^1.2.3",
     "react-reveal": "^1.2.2",

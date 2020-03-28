@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react'
 
-const initialState = { glossaries: [] }
+const initialState = { glossaries: [], score: 0 }
 const store = createContext(initialState)
 const { Provider } = store
 
@@ -9,6 +9,8 @@ const StateProvider = ( { children } ) => {
     switch(action.type) {
       case 'INIT':
         return { ...state, glossaries: action.payload }
+      case 'ANS':
+        return { ...state, score: state.score++ }
       default:
         return state
     };
